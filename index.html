@@ -1,0 +1,100 @@
+<!-- /*****************************************************************************
+
+ITC5202 - Project 2
+I declare that this assignment is my own work in accordance with Humber Academic Policy.
+No part of this assignment has been copied manually or electronically from any other source.
+(including web sites) or distributed to other students.
+
+Group member Names: Rajat Sachdeva Pranav Panchal Smith Dias
+Student IDs: N01605453 N01609997 N01607819
+
+Date: April 7th, 2024
+
+*****************************************************************************/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cadence offers an unparalleled journey into the world of music, combining seamless streaming with personalized recommendations to create a truly immersive listening experience">
+    <title>Cadence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="nav-container">
+        <img src="logo.png" alt="cadence" height="80px">
+        <p>
+            <a href="index.html">
+                <svg width="30px" height="30px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    stroke="">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                        stroke-width="0.048"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M21.4498 10.275L11.9998 3.1875L2.5498 10.275L2.9998 11.625H3.7498V20.25H20.2498V11.625H20.9998L21.4498 10.275ZM5.2498 18.75V10.125L11.9998 5.0625L18.7498 10.125V18.75H14.9999V14.3333L14.2499 13.5833H9.74988L8.99988 14.3333V18.75H5.2498ZM10.4999 18.75H13.4999V15.0833H10.4999V18.75Z"
+                            fill="#ffffff"></path>
+                    </g>
+                </svg>Home</a>
+        </p>
+        <p>
+            <a href="">
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    stroke="#ffffff">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M9 19C9 20.1046 7.65685 21 6 21C4.34315 21 3 20.1046 3 19C3 17.8954 4.34315 17 6 17C7.65685 17 9 17.8954 9 19ZM9 19V5L21 3V17M21 17C21 18.1046 19.6569 19 18 19C16.3431 19 15 18.1046 15 17C15 15.8954 16.3431 15 18 15C19.6569 15 21 15.8954 21 17ZM9 9L21 7"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>Playlists</a>
+        </p>
+    </div>
+    <div class="genre-container">
+        <div class="header">
+            <p>Browse all</p>
+            <div class="searchDiv">
+                <input type="text" name="search" id="search" placeholder="What do you want to play?">
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="showCheckbox">
+                <input type="checkbox" name="show" id="show">
+                <label for="show">Show Playlists</label>
+            </div>
+            <!-- //button to reset  -->
+            <button id="resetButton">Reset</button>
+        </div>
+        <div class="genre">
+        </div>
+
+        <!-- //track details -->
+        <dialog id="modal-tracks">
+            <div style="display: flex">
+                <h4>List of tracks</h4>
+                <p type="button" style="margin-left: auto; cursor: pointer" id="close">x</p>
+            </div>
+            <div id="tracksDiv">
+                <!-- Track details will be dynamically added here -->
+            </div>
+        </dialog>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

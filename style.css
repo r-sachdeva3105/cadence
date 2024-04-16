@@ -1,0 +1,317 @@
+/*****************************************************************************
+
+ITC5202 - Project 2
+I declare that this assignment is my own work in accordance with Humber Academic Policy.
+No part of this assignment has been copied manually or electronically from any other source.
+(including web sites) or distributed to other students.
+
+Group member Names: Rajat Sachdeva Pranav Panchal Smith Dias
+Student IDs: N01605453 N01609997 N01607819
+
+Date: April 7th, 2024
+
+*****************************************************************************/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.nav-container {
+    margin: 20px 10px 20px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #121212;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: 300px;
+}
+
+.nav-container a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-container p {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 20px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.searchDiv, .showCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header input[type=text] {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 15px;
+    width: 200px;
+    height: 20px;
+    background-color: #242424;
+    color: #ffffff;
+
+    &:focus {
+        outline: 2px solid #ffffff;
+    }
+
+}
+
+.header input[type=checkbox] {
+    appearance: none;
+    background-color: #282828;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+}
+
+.header input[type=checkbox]::before {
+bottom: -6px;
+content: "";
+left: -6px;
+position: absolute;
+right: -6px;
+top: -6px;
+}
+
+.header input[type=checkbox],
+.header input[type=checkbox]::after {
+transition: all 100ms ease-out;
+}
+
+.header input[type=checkbox]::after {
+background-color: #fff;
+border-radius: 50%;
+content: "";
+height: 14px;
+left: 3px;
+position: absolute;
+top: 3px;
+width: 14px;
+}
+
+.header input[type=checkbox]:hover {
+background-color: #2f2f2f;
+transition-duration: 0s;
+}
+
+.header input[type=checkbox]:checked {
+background-color: #8C20DF;
+}
+
+.header input[type=checkbox]:checked::after {
+background-color: #fff;
+left: 23px;
+}
+
+.checkbox-wrapper-2 :focus:not(.focus-visible) {
+outline: 0;
+}
+
+.header input[type=checkbox]:checked:hover {
+background-color: #9138d5;
+}
+
+.genre-container {
+    width: 1240px;
+    margin: 20px 20px 20px 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #121212;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: scroll;
+    width: 100%;
+    flex-wrap: wrap;
+  
+   
+
+}
+
+.genre-container::-webkit-scrollbar {
+    display: none;
+}
+
+.genre {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.genre>div {
+    /* margin: 10px; */
+    display: grid;
+    cursor: pointer;
+}
+
+.genre img {
+    border-radius: 10px;
+    margin: 15px;
+    transition: 1s;
+    animation: slide-up 0.5s ease-out forwards;
+}
+
+#resetButton {
+    background-color: #8C20DF;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resetButton:hover {
+    background-color: #9138d5; 
+}
+
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.genre p {
+    margin: 0;
+    margin-left: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    animation: slide-up 0.5s ease-out forwards;
+}
+
+hr {
+    margin: 20px 40px;
+    border-color: #242424;
+   
+
+}
+
+
+.tracks-list {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 10px;
+    
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.track-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.track-artist {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+    margin-left: 50px;
+    color: red;
+}
+
+.track-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-left:auto;
+    border-radius: 20px;
+    
+}
+
+
+
+
+.genre-container .playlists-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+
+}
+
+
+.playlists-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.genre-container .playlist img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.genre-container .playlist-name {
+    margin: 10px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.horizontal-hr {
+    display: block;
+    border: none;
+    border-top: 1px solid #ccc; 
+    margin: 0;
+    padding: 0;
+}
+
+.genre-name {
+    margin: 0;
+    font-size: 14px; 
+}
+
+.genre-img {
+    margin-top: 10px; 
+}
